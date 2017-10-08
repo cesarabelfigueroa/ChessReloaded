@@ -1,13 +1,20 @@
+import java.awt.Color;
 
 public class Rook extends Piece{
 	private static final  String name = "Rook";
 
-	Rook(Position position, String image, int color){
+	Rook(String image, Position position, Color color){
 		super(name, image, position, color);
 	}
 
 	@Override
 	public boolean isValidMove(Position origin, Position destination){
-		return true;
+		if(origin.x == destination.x){
+			return true;
+		}else if(origin.y == destination.y){
+			return true;
+		}else{
+			return false;
+		}
 	}
 }

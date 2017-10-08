@@ -1,19 +1,18 @@
-
 import java.awt.Color;
 
-public class Piece{
+public abstract class Piece{
 	Position position;
-	String name, image;
+	public String name, image;
 	Color color;
 
-	Piece(String name,  String image, Position position,int color){
+	Piece(String name,  String image, Position position,Color color){
 		this.position = position;
 		this.name = name;
 		this.image = image;
-		this.color = new Color(color);
+		this.color = color;
 	}
 
 	public boolean isValidMove(Position origin, Position destination){
-		return true;
+		return false;
 	}
 }
